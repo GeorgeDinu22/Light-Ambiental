@@ -1,0 +1,186 @@
+
+.main-body{
+    width: 100%;
+    height: 80vh;
+    margin-top: 50px;
+}
+.locatie{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.locatie a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.locatie a:hover{
+    text-decoration: underline;
+}
+.locatie img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.locatie-container{
+    color: rgb(0, 0, 0);
+    background-color: hsla(0, 0%, 27%, 0.507);
+    position: absolute;
+    display: flex;
+    justify-content:left;
+    box-sizing: border-box;
+    align-items: center;
+    width: 84%;
+    height: 100px;
+    top:-100%;
+    left: 50%;
+    translate: -50% -50%;
+    animation: slideUp2 800ms ease-in-out forwards 400ms;
+    border-radius: 10px;
+}
+.linie{
+    margin-left:0;
+    height: 125%;
+    min-width: 18%;
+    background-color: rgb(119, 0, 255);
+    color: white;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 50px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 10px;
+}
+
+.linie:hover > i{
+    scale: 1.2;
+}
+.linie i{
+    transition: scale ease-in-out 400ms;
+}
+
+.locatie-text{
+    color: rgb(255, 255, 255);
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    font-size: clamp(18px,4vw,32px);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    line-height: 26px;
+}
+
+.tel-container{
+    color: rgb(0, 0, 0);
+    background-color: hsla(0, 0%, 27%, 0.507);
+    position: absolute;
+    display: flex;
+    justify-content:left;
+    box-sizing: border-box;
+    align-items: center;
+    width: 84%;
+    height: 100px;
+    top:-100%;
+    left: 50%;
+    translate: -50% -50%;
+    animation: slideUp1 800ms ease-in-out forwards;
+    border-radius: 10px;
+}
+
+.tel-text{
+    color: rgb(255, 255, 255);
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    font-size: clamp(18px,4vw,32px);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    line-height: 26px;
+}
+.mail-container{
+    color: rgb(0, 0, 0);
+    background-color: hsla(0, 0%, 27%, 0.507);
+    position: absolute;
+    display: flex;
+    justify-content:left;
+    box-sizing: border-box;
+    align-items: center;
+    width: 84%;
+    height: 100px;
+    top:-100%;
+    left: 50%;
+    translate: -50% -50%;
+    animation: slideUp3 800ms ease-in-out forwards 800ms;
+    border-radius: 10px;
+}
+
+.mail-text{
+    color: rgb(255, 255, 255);
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    font-size: clamp(16px,4vw,32px);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    line-height: 26px;
+}
+.mail-text a{
+    font-size: clamp(15px,4vw,32px);
+}
+
+@keyframes slideUp1 {
+    100%{
+        top:20%;
+    }
+}
+@keyframes slideUp2 {
+    100%{
+        top:48%;
+    }
+}
+@keyframes slideUp3 {
+    100%{
+        top:76%;
+    }
+}
+@media(min-width:700px){
+    .locatie-text,
+    .tel-text,
+    .mail-text{
+        line-height: 36px;
+    }
+    .tel-container,
+    .mail-container,
+    .locatie-container{
+        height: 120px;
+    }
+    @keyframes slideUp1 {
+        100%{
+            top:20%;
+        }
+    }
+    @keyframes slideUp2 {
+        100%{
+            top:50%;
+        }
+    }
+    @keyframes slideUp3 {
+        100%{
+            top:80%;
+        }
+    }
+}
