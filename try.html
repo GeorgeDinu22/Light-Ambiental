@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imagine Pop-Up</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="image-gallery">
+    <img src="images/poza9.webp" alt="Imagine 1" class="imagine-mica" />
+    <img src="images/poza6.webp" alt="Imagine 2" class="imagine-mica" />
+  </div>
+
+  <div id="container-imagine" class="modal">
+    <img id="imagine-marita" src="" alt="Imagine Mare" />
+    <span id="close-button">&times;</span>
+    
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      
+      .image-gallery {
+        display: flex;
+        gap: 10px;
+        padding: 20px;
+      }
+      
+      .imagine-mica {
+        width: 150px;
+        height: auto;
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out;
+      }
+      
+      .imagine-mica:hover {
+        transform: scale(1.1);
+      }
+      
+      /* Modal styles */
+      .modal {
+        display: none; /* Ascunde modalul implicit */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      }
+      
+      .modal img {
+        max-width: 90%;
+        max-height: 90%;
+      }
+
+      #close-button {
+        position: absolute;
+        top:10%;
+        right: 10%;
+        color: white;
+        font-size: 60px;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 1001;
+      }
+</style>
+
+<script>
+// Selectăm elementele relevante
+const pozaMica = document.querySelectorAll('.imagine-mica');
+const fundal = document.getElementById('container-imagine');
+const pozaMare = document.getElementById('imagine-marita');
+const closeButton = document.getElementById('close-button');
+
+// Adăugăm evenimente pentru fiecare imagine
+pozaMica.forEach((element) => {
+    element.addEventListener('click', () => {
+    pozaMare.src = element.src;
+
+    // Setează imaginea din modal
+    fundal.style.display = 'flex'; // Afișează modalul
+  });
+});
+
+// Închide modalul când apăsăm pe butonul de închidere
+closeButton.addEventListener('click', () => {
+  fundal.style.display = 'none';
+});
+
+// Închide modalul când apăsăm oriunde în afara imaginii
+modal.addEventListener('click', (e) => {
+  if (e.target !== modalImage) {
+    fundal.style.display = 'none';
+  }
+});
+</script>
+
+</html>
