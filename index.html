@@ -259,6 +259,27 @@
     const slider = document.querySelector('.slider');
     const videoMare = document.getElementById('video-mare');
 
+    const PozePreLoad =[];
+    PozaMica.forEach(poza =>{
+      PozePreLoad.push(poza.getAttribute('data-target'));
+    })
+
+    PozePreLoad.forEach(src =>{
+      if(src.endsWith('.webp')){
+        const imageLoad = new Image;
+        imageLoad.src = src;
+      }
+      else{
+        if(src.endsWith('.webm')){
+          const videoLoad = document.createElement('video');
+          videoLoad.src = src;
+          videoLoad.style.display = 'none';
+          console.log(`Video încărcat: ${src}`);
+        }
+    }
+  });
+     
+
     PozaMica.forEach((element) => {
       element.addEventListener('click',() =>
       {const ImageSRC = element.getAttribute('data-target');
@@ -682,7 +703,7 @@
   <div class="border2"></div>
 
   <div class="autor">
-      ©Light Ambiental | Toate Drepturile Rezervate - Created By <a href="#">Dinu George</a>
+      ©Light Ambiental | Toate Drepturile Rezervate - Created By <a>Dinu George</a>
   </div>
 </div>
 
