@@ -127,9 +127,11 @@
 
   <div class="body-video">
 
-    <video id="video-prezentare" src="video-prezentare.webm" muted>
-      Browserul tău nu suportă elementul video.
-  </video>
+    <video id="video-prezentare" playsinline muted>
+      <source  src="video-prezentare.webm" type="video/webm">
+      <source  src="video-prezentare.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   <i id="replay-button" class="fa-regular fa-circle-play"></i>
 </div>
 
@@ -248,7 +250,7 @@
       <i class="fa-solid fa-x"></i>
     </span>
     <img id="imagine-mare" src="" alt="Imagine Lightbox">
-    <video id="video-mare" src=""></video>
+    <video id="video-mare" src="" playsinline></video>
   </div>
 
   <script>
@@ -274,8 +276,8 @@
           const videoLoad = document.createElement('video');
           videoLoad.src = src;
           videoLoad.style.display = 'none';
-          console.log(`Video încărcat: ${src}`);
         }
+       
     }
   });
      
@@ -374,7 +376,11 @@
           Alex Montrey
         </div>
         <div class="review-video">
-          <video id="video-montrey" src="montrey-video.webm"></video>
+          <video id="video-montrey" playsinline>
+            <source  src="montrey-video.webm" type="video/webm">
+            <source  src="montrey-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
           <div id="play-button">
             <i class="fa-regular fa-circle-play"></i>
           </div>
