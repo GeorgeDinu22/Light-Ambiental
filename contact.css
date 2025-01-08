@@ -1,0 +1,146 @@
+.body-info{
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    background-image: url("images/earth.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 30px;
+}
+.main-body a{
+    color: white;
+    text-decoration: none;
+}
+
+.tel-container,
+.mail-container,
+.locatie-container{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    align-items: center;
+    width: 98%;
+    line-height: 27px;
+}
+
+.tel-container i,
+.mail-container i,
+.locatie-container i{
+    font-size:54px;
+    position: relative;
+    width: 74px;
+    display: flex;
+    justify-content: center;
+}
+.mail-container a{
+    font-size: 26px;
+}
+
+
+.horizontal-line{
+    width:6px;
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    display: none;
+}
+.text{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    width: 100%;
+}
+
+#text-tel{
+    justify-content: center;
+    font-size: 30px;
+}
+
+iframe{
+    width: 100%;
+    height: 400px;
+    margin-bottom: 0px;
+}
+
+.body-info a:hover{
+    text-decoration: underline;
+}
+
+@media(min-width:750px){
+    #text-tel{
+        justify-content: left;
+        font-size: 40px;
+    }
+    .main-body{
+        padding: 50px 0;
+        padding-left: 50px;
+        display: flex;
+        background-image: url("images/earth.webp");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        
+    }
+    .body-info{
+        width: 100%;
+        background-image: none;
+    }
+
+    .tel-container,
+.mail-container,
+.locatie-container{
+    flex-direction: row;
+}
+    .tel-container i,
+    .mail-container i,
+    .locatie-container i{
+    font-size:68px;
+    }
+    .tel-container a,
+    .mail-container a,
+    .locatie-container a{
+    font-weight:normal;
+    }  
+    .locatie-container .text{
+        padding-right:0;
+    } 
+    .text{
+        font-size: 40px;
+        text-align: left;
+        line-height: 40px;
+    }
+    .mail-container a{
+        font-size: 36px;
+    }
+    .horizontal-line{
+        width:8px;
+        display: block;
+        height: 80px;
+        background-color: rgb(255, 255, 255);
+    }
+
+    #maps{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    iframe{
+        width: 80%;
+        height: 80%;
+        margin: 0;
+    }
+}
+@media (min-width:780px) {
+    #text-tel{
+        justify-content: center;
+    }
+}
